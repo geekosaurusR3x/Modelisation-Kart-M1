@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CE3CD32D-900E-4B99-A3FC-72EE753C9607}</ProjectGuid>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>ApplicationRegainDeBase</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>F:\Cours\Projects\Modekart\LibVisualDebug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>F:\Cours\Projects\Modekart\LibVisualRelease;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>Includes\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>Includes\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.ico" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AfficheurErreursGraphique.cpp" />
+    <ClCompile Include="ApplicationRegainDeBase.cpp" />
+    <ClCompile Include="ArretTriangulaire.cpp" />
+    <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="AxeEpaule.cpp" />
+    <ClCompile Include="AxeEpauleGoupillable.cpp" />
+    <ClCompile Include="AxePiedColonneDirection.cpp" />
+    <ClCompile Include="BDCreationBoite.cpp" />
+    <ClCompile Include="BDCreationDodecaedre.cpp" />
+    <ClCompile Include="BDCreationEllipsoide.cpp" />
+    <ClCompile Include="BDCreationSphere.cpp" />
+    <ClCompile Include="BDCreationSpikyDode.cpp" />
+    <ClCompile Include="BDLumiereAmbiante.cpp" />
+    <ClCompile Include="Bielle.cpp" />
+    <ClCompile Include="ChaineCinematique.cpp" />
+    <ClCompile Include="Chassis.cpp" />
+    <ClCompile Include="ConsolesGraphiques.cpp" />
+    <ClCompile Include="Conversions.cpp" />
+    <ClCompile Include="CremaillereStandard.cpp" />
+    <ClCompile Include="FenetreCinematique.cpp" />
+    <ClCompile Include="Form1.cpp" />
+    <ClCompile Include="Goupille.cpp" />
+    <ClCompile Include="karting.cpp" />
+    <ClCompile Include="LiaisonRotationRotation.cpp" />
+    <ClCompile Include="LiaisonRotationTranslation.cpp" />
+    <ClCompile Include="LiaisonTranslationRotation.cpp" />
+    <ClCompile Include="LiaisonTranslationTranslation.cpp" />
+    <ClCompile Include="OutilPercage.cpp" />
+    <ClCompile Include="OutilPercageCylindrique.cpp" />
+    <ClCompile Include="OutilPercageRectangulaire.cpp" />
+    <ClCompile Include="Perceuse.cpp" />
+    <ClCompile Include="Piece.cpp" />
+    <ClCompile Include="PignonStandard.cpp" />
+    <ClCompile Include="Prisme.cpp" />
+    <ClCompile Include="Repere3D.cpp" />
+    <ClCompile Include="Roue.cpp" />
+    <ClCompile Include="Siege.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SupportCremaillere.cpp" />
+    <ClCompile Include="SupportRoue.cpp" />
+    <ClCompile Include="SupportVolant.cpp" />
+    <ClCompile Include="Test.cpp" />
+    <ClCompile Include="TIColorerSolide.cpp" />
+    <ClCompile Include="TIDecodagesFaces.cpp" />
+    <ClCompile Include="TIDecodagesSolides.cpp" />
+    <ClCompile Include="TIDestructionsSolides.cpp" />
+    <ClCompile Include="TINormaleFace.cpp" />
+    <ClCompile Include="Utilitaire.cpp" />
+    <ClCompile Include="Volant.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Regain2011\Includes\BibliothequeBRepP.h" />
+    <ClInclude Include="..\..\Regain2011\Includes\BibliothequeConsole.h" />
+    <ClInclude Include="..\..\Regain2011\Includes\BibliothequeLGB.h" />
+    <ClInclude Include="..\..\Regain2011\Includes\BibliothequeMathematique.h" />
+    <ClInclude Include="..\..\Regain2011\Includes\BibliothequeSTL.h" />
+    <ClInclude Include="..\..\Regain2011\Includes\BibliothequeVisualiseur.h" />
+    <ClInclude Include="..\..\Regain2011\Includes\BibliothequeZBuffer.h" />
+    <ClInclude Include="AfficheurErreursGraphique.h" />
+    <ClInclude Include="ArretTriangulaire.h" />
+    <ClInclude Include="AxeEpaule.h" />
+    <ClInclude Include="AxeEpauleGoupillable.h" />
+    <ClInclude Include="AxePiedColonneDirection.h" />
+    <ClInclude Include="BDCreationBoite.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="BDCreationDodecaedre.h" />
+    <ClInclude Include="BDCreationEllipsoide.h" />
+    <ClInclude Include="BDCreationSphere.h" />
+    <ClInclude Include="BDCreationSpikyDode.h" />
+    <ClInclude Include="BDLumiereAmbiante.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Bielle.h" />
+    <ClInclude Include="ChaineCinematique.h" />
+    <ClInclude Include="Chassis.h" />
+    <ClInclude Include="Conversions.h" />
+    <ClInclude Include="CremaillereStandard.h" />
+    <ClInclude Include="FenetreCinematique.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Form1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Goupille.h" />
+    <ClInclude Include="karting.h" />
+    <ClInclude Include="Liaison.h" />
+    <ClInclude Include="LiaisonRotationRotation.h" />
+    <ClInclude Include="LiaisonRotationTranslation.h" />
+    <ClInclude Include="LiaisonTranslationRotation.h" />
+    <ClInclude Include="LiaisonTranslationTranslation.h" />
+    <ClInclude Include="Mouvement.h" />
+    <ClInclude Include="OutilPercage.h" />
+    <ClInclude Include="OutilPercageCylindrique.h" />
+    <ClInclude Include="OutilPercageRectangulaire.h" />
+    <ClInclude Include="Perceuse.h" />
+    <ClInclude Include="Piece.h" />
+    <ClInclude Include="PignonStandard.h" />
+    <ClInclude Include="Prisme.h" />
+    <ClInclude Include="Repere3D.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Rotation.h" />
+    <ClInclude Include="Roue.h" />
+    <ClInclude Include="Siege.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SupportCremaillere.h" />
+    <ClInclude Include="SupportRoue.h" />
+    <ClInclude Include="SupportVolant.h" />
+    <ClInclude Include="TIColorerSolide.h" />
+    <ClInclude Include="TIDecodagesFaces.h" />
+    <ClInclude Include="TIDecodagesSolides.h" />
+    <ClInclude Include="TIDestructionsSolides.h" />
+    <ClInclude Include="TINormaleFace.h" />
+    <ClInclude Include="Translation.h" />
+    <ClInclude Include="Utilitaire.h" />
+    <ClInclude Include="Volant.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="app.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BDCreationBoite.resx">
+      <DependentUpon>BDCreationBoite.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BDCreationSphere.resx" />
+    <EmbeddedResource Include="BDLumiereAmbiante.resx">
+      <DependentUpon>BDLumiereAmbiante.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FenetreCinematique.resx">
+      <DependentUpon>FenetreCinematique.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resX">
+      <DependentUpon>Form1.h</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Gdi32.Lib" />
+    <Library Include="GlU32.Lib" />
+    <Library Include="OpenGL32.Lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
